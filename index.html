@@ -27,7 +27,8 @@
                     <div class="col-4">
                         <form onsubmit="app.titleController.create(event)">
                             <div class="form-group">
-                                <input type="text" name="title" placeholder="Enter Your Task">
+                                <input type="text" name="title" maxlength="50" minlength="3"
+                                    placeholder="Enter Your Task">
                                 <button class="btn-success" type="submit">Enter</button>
                             </div>
                         </form>
@@ -35,6 +36,11 @@
                 </div>
                 <div class="row" id="tasks">
 
+                </div>
+                <div class="row" id="checked">
+                    <div class="col-3">
+                        <p>Tasks Completed:<span id="completed"></span></p>
+                    </div>
                 </div>
             </div>
         </div>

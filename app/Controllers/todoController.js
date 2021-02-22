@@ -15,7 +15,13 @@ export default class TodoController{
         todoService.create(rawTodo)
     }
     delete(todoId) {
-        todoService.delete(todoId)
+        //todoService.delete(todoId)
+        if(confirm("do you want to delete?")){
+            todoService.delete(todoId)
+        }
+    }
+    checked(todoId){
+        todoService.checked(todoId)
     }
     
 }

@@ -9,11 +9,11 @@ get taskTemplate() {
     let template = /*html*/`
             <div class="col-4 border rounded shadow-lg">
                 <h1>${this.title}<button class="text-danger close mt-3"
-                onclick="app.pizzaController.delete('${this.id}')"><span>&times;</span></button> </h1>
+                onclick="app.titleController.delete('${this.id}')"><span>&times;</span></button> </h1>
                 <h5>Task Title</h5>
                 <form onsubmit="app.todoController.create(event, '${this.id}')">
                     <div class="form-group">
-                        <input type="text" name="title" placeholder="Enter your to-do...">
+                        <input type="text" name="title" minlength="3" required maxlength="15" placeholder="Enter your to-do...">
                         <button type="submit">Add To-do</button>
                         <div class="row" id = "todos-${this.id}">`
 

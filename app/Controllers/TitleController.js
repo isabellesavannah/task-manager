@@ -22,8 +22,12 @@ export default class TitleController{
         }
         titleServices.create(rawTask)
     }
-    delete(titleId){
-        titleServices.delete(titleId)
+    delete(taskId){
+        //titleServices.delete(taskId)
+        //confirm()
+        //if( == true)
+        if(confirm("do you want to delete?")){
+            titleServices.delete(taskId)
+        }
     }
-
 }
