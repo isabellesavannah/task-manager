@@ -10,7 +10,7 @@ export default class TodoController{
         let form = event.target
         let rawTodo = {
             title: form.title.value,
-            tasksId: titleId
+            taskId: titleId
         }
         todoService.create(rawTodo)
     }

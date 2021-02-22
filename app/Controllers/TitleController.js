@@ -6,7 +6,7 @@ function _draw(){
     let taskTemplate = ""
     ProxyState.tasks.forEach(task => taskTemplate += task.taskTemplate)
     taskTitleElem.innerHTML = taskTemplate
-    console.log("hello from controller")
+    //console.log("hello from controller")
 }
 
 export default class TitleController{

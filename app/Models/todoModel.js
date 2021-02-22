@@ -1,11 +1,11 @@
 import {generateId} from "../Utils/GenerateId.js"
 
 export default class Todo {
-    constructor({ title, id = generateId(), titleId })
+    constructor({ title, id = generateId(), taskId })
     {
         this.title = title
         this.id = id
-        this.titleId = titleId
+        this.taskId = taskId
     }
     get Template(){
         return /* html */`
