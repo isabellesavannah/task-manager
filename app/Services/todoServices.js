@@ -16,8 +16,8 @@ class TodoServices{
         ProxyState.todo = ProxyState.todo.filter(t => t.id != todoId)
         //ProxyState.todo = ProxyState.todo.filter (t=> t.id ! = todoId)
     }
-    checked(elem){
-        ProxyState.todo = ProxyState.todo.filter(t=> t.id != todoId)
-    }
+    // checked(elem){
+    //     ProxyState.todo = ProxyState.todo.filter(t=> t.id != todoId)
+    // }
 }
 export const todoService = new TodoServices()
