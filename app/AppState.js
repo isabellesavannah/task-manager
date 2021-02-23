@@ -12,6 +12,7 @@ class AppState extends EventEmitter {
   tasks = []
   /** @type {Todo[]}*/
   todo = []
+  box =[]
 }
 
 export const ProxyState = new Proxy(new AppState(), {

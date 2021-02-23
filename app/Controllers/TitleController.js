@@ -18,7 +18,8 @@ export default class TitleController{
         event.preventDefault()
         let form = event.target
         let rawTask = {
-            title: form.title.value
+            title: form.title.value,
+            color: form.color.value
         }
         titleServices.create(rawTask)
     }
@@ -30,4 +31,5 @@ export default class TitleController{
             titleServices.delete(taskId)
         }
     }
+    
 }

@@ -1,13 +1,14 @@
 import {generateId} from "../Utils/GenerateId.js"
 import { ProxyState } from "../AppState.js"
 export default class Tasktitle{
-    constructor({title, id = generateId()}) {
+    constructor({title, id = generateId(),color, }) {
         this.title = title
         this.id = id
+        this.color = color
     }
 get taskTemplate() {
     let template = /*html*/`
-            <div class="col-4 border rounded shadow-lg">
+            <div style="background-color: ${this.color}" class="col-4 border rounded shadow-lg">
                 <h1>${this.title}<button class="text-danger close mt-3"
                 onclick="app.titleController.delete('${this.id}')"><span>&times;</span></button> </h1>
                 <h5>Task Title</h5>
@@ -16,6 +17,7 @@ get taskTemplate() {
                         <input type="text" name="title" minlength="3" required maxlength="15" placeholder="Enter your to-do...">
                         <button type="submit">Add To-do</button>
                         <div class="row" id = "todos-${this.id}">`
+                        
 
                         let todo = ProxyState.todo.filter(t => t.taskId == this.id)
                         todo.forEach(t => template += t.Template)

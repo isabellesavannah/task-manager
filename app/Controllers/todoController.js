@@ -21,7 +21,16 @@ export default class TodoController{
         }
     }
     checked(todoId){
-        todoService.checked(todoId)
+        let elem = document.getElementById("box")
+        for (var inp of elem){
+            if (inp.type=== "checkbox")
+            inp.checked = true
+            todoService.checked(elem)
+        }
+
     }
+    // checked(todoId){
+    //     todoService.checked(todoId)
+    // }
     
 }

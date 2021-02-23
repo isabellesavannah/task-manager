@@ -11,8 +11,8 @@ class TitleServices{
     delete(taskId){
         ProxyState.tasks = ProxyState.tasks.filter (p=> p.id != taskId)
         ProxyState.todo = ProxyState.todo.filter(t=> t.id != taskId)
-        
     }
+    
     
     
 }
